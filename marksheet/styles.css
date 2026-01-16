@@ -42,5 +42,11 @@ h1{
 .form-group{
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
+}
+input{
+    padding: 8px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
