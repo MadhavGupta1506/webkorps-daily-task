@@ -47,6 +47,33 @@ h1{
 input{
     padding: 8px;
     font-size: 18px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 4px;
+}
+.marks-table{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.marks-table th, .marks-table td{
+    border: 3px solid #7b7575;
+    padding: 15px;
+    text-align: center;
+    text-align: center;
+}
+.marks-table th{
+    background-color: #b2a7a7;
+}
+.marks-table tr{
+    background-color: #f9f9f9;
+}
+.marks-table tr:hover{
+    background-color: #ddd;
+}
+.student-name, .student-rollNo{
+    text-align: center;
+    margin-top: 10px;
 }
