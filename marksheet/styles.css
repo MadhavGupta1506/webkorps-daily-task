@@ -12,8 +12,8 @@
     justify-content: center;
     border: 2px solid black;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px grey;
-    background-color: #d7b8b8;
+    box-shadow: 10px 10px 15px grey;
+    background-color: #a6b2cf;
 }
 body{
     font-family: Arial, sans-serif;
@@ -49,9 +49,10 @@ input{
     font-size: 18px;
     border: 1px solid #cccccc;
     border-radius: 4px;
+    margin-left: 80px ;
 }
 .marks-table{
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,4 +77,41 @@ input{
 .student-name, .student-rollNo{
     text-align: center;
     margin-top: 10px;
+}
+.result{
+    margin-top: 20px;
+    padding-right: 100px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    border-radius: 5px;
+    padding: 10px;
+}
+.student-details {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #a6b2cf;
+    padding:18px;
+    display: inline-block;
+}
+
+.submit-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+/* .result-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.container{
+    flex-direction: column;
+    display: flex;
+
 }
