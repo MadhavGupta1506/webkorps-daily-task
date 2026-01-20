@@ -1,0 +1,1 @@
+BASE_URL="https://api.weatherapi.com/v1/current.json?key=280a677094184b09ad3101933262001"
