@@ -12,20 +12,20 @@ function addTask(){
         ${input}
         </span>
         <div>
-        <button onclick="completeTask('task${taskCount}')" class="completeBtn"> Complete</button>
+        <button onclick="completeTask('${taskCount}')" class="completeBtn${taskCount} completeBtn"> Complete</button>
         
-        <button onclick="removeTask('task${taskCount}')" class='removeBtn'> Remove</button>
+        <button onclick="removeTask('${taskCount}')" class='removeBtn'> Remove</button>
         </div>
         </li>
 
         `);
 };
 function removeTask(taskNum){
-    $("."+taskNum).remove();
+    $(".task"+taskNum).remove();
 }
 function completeTask(taskNum){
-    $("."+taskNum+">div").remove()
-    $("."+taskNum).css({"background-color":"#5CE65C",
+    $(".completeBtn"+taskNum).remove()
+    $(".task"+taskNum).css({"background-color":"#5CE65C",
         "border-radius":"8px",
         "padding":"10px",
         "margin-bottom":"5px"
