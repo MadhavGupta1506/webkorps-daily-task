@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+.cell{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #333;
+    text-align: center;
+    font-size: 20px;
+}
+table{
+    margin: 20px auto;
+    border: 5px solid #333;
+}
+td{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 4px;
+    border: 2px solid #333;
+    
+}
+.box1{
+    background-color: #c8b1b1;
+}
+.box2{
+    background-color: #e9dddd;
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
