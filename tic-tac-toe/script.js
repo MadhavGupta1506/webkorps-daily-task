@@ -1,10 +1,4 @@
-let player = 0;
-let board = [
-    ["", "", ""],
-    ["", "", ""],
-    ["", "", ""],
-];
-let gameOver = false;
+let player, board, gameOver;
 
 function startGame(){
     $("table").html("")
@@ -41,7 +35,11 @@ function playMove(i, j) {
     }
     let curr = player;
     move(i,j,curr);
-  if (checkWin(i, j, curr)) {
+    
+    const winCells = checkWin(i, j, curr);
+  if (winCells) {
+    highlightWin(winCells);
+
     gameOver=true;
     setTimeout(() => {
     alert(`Player ${curr} wins!!`);
@@ -59,28 +57,34 @@ function checkWin(i, j, player) {
     board[i][2] === player
   ) {
   
-    return true;
+    return [[i,0], [i,1], [i,2]];
   } else if (
     board[0][j] === player &&
     board[1][j] === player &&
     board[2][j] === player
   ) {
-    return true;
+    return [[0,j], [1,j], [2,j]];
   } else if (
     i === j &&
     board[0][0] === player &&
     board[1][1] === player &&
     board[2][2] === player
   ) {
-    return true;
+    return [[0,0], [1,1], [2,2]];
   } else if (
     i + j === 2 &&
     board[0][2] === player &&
     board[1][1] === player &&
     board[2][0] === player
   ) {
-    return true;
+    return [[0,2], [1,1], [2,0]];
   }
 
   return false;
+}
+
+function highlightWin(cells) {
+  cells.forEach(([r, c]) => {
+    $(`.row${r} > .col${c}`).css("background", "#877663");
+  });
 }
